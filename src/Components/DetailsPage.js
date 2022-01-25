@@ -1,19 +1,18 @@
 import React from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import DishDetailsCard from "./DishDetailsCard";
 
 const DetailsPage = ({ rowData }) => {
   let navigate = useNavigate();
   console.log(rowData);
 
-  const { name, diet, flavor_profile, region, state } = rowData;
   return (
-    <div>
-      <h1>{name}</h1>
-      <h1>{diet}</h1>
-      <h1>{flavor_profile}</h1>
-      <h1>{region}</h1>
-      <h1>{state === -1 ? "NA" : state}</h1>
+    <section className="dish-details-wrapper">
+      <header className="dish-heading">
+        <h1>Dish Details</h1>
+      </header>
+      <DishDetailsCard rowData={rowData} />
       <button
         onClick={() => {
           navigate("/", { replace: true });
@@ -21,7 +20,7 @@ const DetailsPage = ({ rowData }) => {
       >
         Back
       </button>
-    </div>
+    </section>
   );
 };
 

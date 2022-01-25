@@ -1,0 +1,52 @@
+.dish-details-wrapper {
+  min-height: 40vh;
+  .dish-details-card {
+    width: 50%;
+    min-height: 65vh;
+    margin: auto;
+    display: flex;
+    gap: 1rem 4rem;
+    flex-wrap: wrap;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.15);
+
+    .info-control {
+      width: 15rem;
+      min-height: 8rem;
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: 500;
+        background: #c9ecfc;
+        margin: 1rem 0;
+        height: 4rem;
+        border-radius: 5px;
+        padding: 1rem;
+        text-transform: capitalize;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+      }
+      ul {
+        margin: 1rem 0;
+        min-width: 20rem;
+        background: #c9ecfc;
+        border-radius: 5px;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
+        li {
+          list-style: none;
+          background: lightblue;
+          margin: 1rem;
+          padding: 0.6rem;
+          width: 8rem;
+          display: inline-block;
+          font-size: 1.2rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
