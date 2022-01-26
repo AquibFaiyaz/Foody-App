@@ -2,11 +2,11 @@ import React, { useMemo } from "react";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useTable, useSortBy, useFilters, usePagination } from "react-table";
-import { ROW_CLICKED } from "../Redux/Actions";
-import { COLUMNS } from "./columns";
+import { ROW_CLICKED } from "../../Redux/Actions";
+import { COLUMNS } from "./Components/columns";
 import { IoMdArrowDropdownCircle, IoMdArrowDropupCircle } from "react-icons/io";
 
-const BasicTable = ({ data, handleRowClick }) => {
+const Table = ({ data, handleRowClick }) => {
   let navigate = useNavigate();
   const columns = useMemo(() => COLUMNS, []);
   const tableData = useMemo(() => data, []);
@@ -86,6 +86,8 @@ const BasicTable = ({ data, handleRowClick }) => {
           })}
         </tbody>
       </table>
+
+      {/* Pagination JSX*/}
       <div className="pagination-wrap">
         <span>
           Page{" "}
@@ -103,12 +105,16 @@ const BasicTable = ({ data, handleRowClick }) => {
             </option>
           ))}
         </select>
-        <button onClick={() => previousPage()} disabled={!canPreviousPage}>
-          Previous
-        </button>
-        <button onClick={() => nextPage()} disabled={!canNextPage}>
-          Next
-        </button>
+
+        {/* Next and previos buttons */}
+        <div className="table-btn-wrap">
+          <button onClick={() => previousPage()} disabled={!canPreviousPage}>
+            Previous
+          </button>
+          <button onClick={() => nextPage()} disabled={!canNextPage}>
+            Next
+          </button>
+        </div>
       </div>
     </>
   );
@@ -129,4 +135,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(BasicTable);
+export default connect(mapStateToProps, mapDispatchToProps)(Table);

@@ -1,7 +1,7 @@
 .recipe-table {
   border-collapse: collapse;
   width: 99%;
-  margin: 2rem auto;
+  margin: 4rem auto;
 
   td,
   th {
@@ -43,8 +43,38 @@
     color: white;
     font-size: 1.2rem;
   }
+}
 
-  .pagination-wrap {
-    background: lightblue;
+.pagination-wrap {
+  height: 3rem;
+  margin: 5rem 0 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+
+  span {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  select {
+    border-radius: 4px;
+    font-size: 1.2rem;
+    width: 8rem;
+    padding: 0.2rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+  }
+
+  .table-btn-wrap {
+    button {
+      margin: 0.5rem;
+      font-size: 1.2rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      padding: 0.2rem 0.5rem;
+      cursor: pointer;
+    }
   }
 }

@@ -7,7 +7,7 @@ import {
   CHANGE_INGREDIENTS,
   CLEAR_ALL_INGREDIENTS,
   DELETE_INGREDIENTS,
-} from "../Redux/Actions";
+} from "../../Redux/Actions";
 
 const DishSuggestor = ({
   allIngredients,
@@ -21,6 +21,7 @@ const DishSuggestor = ({
 
   let navigate = useNavigate();
 
+  //Filtering out recipe based on ingredients
   let refData = searchData.filter((item) => {
     let { ingredients } = item;
     let val = ingredients.every((element) => {
@@ -30,6 +31,7 @@ const DishSuggestor = ({
     return val;
   });
 
+  //Sorting allIngredients array
   allIngredients.sort((a, b) => a.localeCompare(b));
 
   //console.log(refData);
