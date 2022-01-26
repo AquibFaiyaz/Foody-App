@@ -1,9 +1,13 @@
 import { data } from "../data/data";
-import { SEARCH_CATEGORY, SEARCH_INPUT_CHANGE } from "./Actions";
+import {
+  CATEGORY_MODAL_OPEN,
+  SEARCH_CATEGORY,
+  SEARCH_INPUT_CHANGE,
+} from "./Actions";
 
 const initialStore = {
   searchData: data,
-  searchChange: "",
+  isModalOpen: false,
   filterData: [],
   searchCategory: "name",
 };
@@ -102,9 +106,16 @@ function navbarReducer(state = initialStore, action) {
           return { ...state, filterData: newData };
       }
     }
+    case CATEGORY_MODAL_OPEN: {
+      return { ...state, isModalOpen: !state.isModalOpen };
+    }
     case SEARCH_CATEGORY: {
       let { data } = action.payload;
-      return { ...state, searchCategory: data };
+      return {
+        ...state,
+        searchCategory: data,
+        isModalOpen: !state.isModalOpen,
+      };
     }
     default:
       return state;

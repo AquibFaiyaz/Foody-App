@@ -32,19 +32,23 @@
       border-radius: 2px;
       padding: 1rem;
       box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
+      h2 {
+        text-align: center;
+      }
       ul {
         //background: lightcoral;
         height: 100%;
         li {
           list-style: none;
           display: inline-block;
-          background: lightcoral;
+          background: lightblue;
           margin: 1rem;
           padding: 0.5rem;
           text-transform: capitalize;
           font-size: 1.1rem;
           font-weight: 500;
           border-radius: 4px;
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
 
           .cancel-icon {
             cursor: pointer;
@@ -58,15 +62,19 @@
       width: 18rem;
       border-radius: 2px;
       box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.15);
+      h2 {
+        text-align: center;
+      }
       p {
         margin: 1rem auto;
         padding: 0.5rem;
-        background: lightcoral;
+        background: lightblue;
         width: 80%;
         text-align: center;
         font-size: 1.2rem;
         font-weight: 500;
         border-radius: 5px;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
       }
     }
   }

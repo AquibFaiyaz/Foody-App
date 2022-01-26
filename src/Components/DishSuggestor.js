@@ -64,6 +64,7 @@ const DishSuggestor = ({
 
         {/* JSX for selected ingredients list */}
         <section className="select-ing-list">
+          <h2>Ingredients</h2>
           <ul>
             {selectIngredients.map((item) => {
               return (
@@ -83,6 +84,7 @@ const DishSuggestor = ({
 
         {/* JSX for suggested dishes */}
         <section className="suggest-dishes">
+          <h2>Dishes</h2>
           {refData.map((dish) => {
             let { name } = dish;
             return <p key={uuidv4()}>{name}</p>;

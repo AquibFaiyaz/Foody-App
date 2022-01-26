@@ -13,13 +13,15 @@ const DetailsPage = ({ rowData }) => {
         <h1>Dish Details</h1>
       </header>
       <DishDetailsCard rowData={rowData} />
-      <button
-        onClick={() => {
-          navigate("/", { replace: true });
-        }}
-      >
-        Back
-      </button>
+      <div className="btn-wrap">
+        <button
+          onClick={() => {
+            navigate("/", { replace: true });
+          }}
+        >
+          Back
+        </button>
+      </div>
     </section>
   );
 };

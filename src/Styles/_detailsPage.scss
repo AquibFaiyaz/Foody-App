@@ -1,5 +1,13 @@
 .dish-details-wrapper {
   min-height: 40vh;
+
+  .dish-heading {
+    h1 {
+      text-align: center;
+      margin: 2rem;
+      font-size: 2.5rem;
+    }
+  }
   .dish-details-card {
     width: 50%;
     min-height: 65vh;
@@ -10,7 +18,8 @@
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.15);
 
     .info-control {
-      width: 15rem;
+      margin: 2rem;
+      width: 14rem;
       min-height: 8rem;
       padding: 1rem;
 
@@ -47,6 +56,26 @@
           border-radius: 5px;
         }
       }
+    }
+  }
+
+  .btn-wrap {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      font-family: "Inter", sans-serif;
+      margin: 0 1rem;
+      padding: 0.7rem 2.5rem;
+      background: #0000ff;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
     }
   }
 }

@@ -86,7 +86,7 @@ const BasicTable = ({ data, handleRowClick }) => {
           })}
         </tbody>
       </table>
-      <div>
+      <div className="pagination-wrap">
         <span>
           Page{" "}
           <strong>

@@ -10,7 +10,7 @@
         .wrapper {
           width: 280px;
           position: absolute;
-          z-index: 5;
+          z-index: 1;
           .search-input {
             display: flex;
             flex-direction: column;
@@ -18,10 +18,10 @@
             input {
               height: 3.2rem;
               border-radius: 4px;
-              background: #f4f2f2;
+              //background: #f4f2f2;
               font-family: "Inter", sans-serif;
 
-              margin-top: 0.3rem;
+              margin-top: -0.3rem;
               padding: 0.3rem 1rem;
               font-size: 1.2rem;
               box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
