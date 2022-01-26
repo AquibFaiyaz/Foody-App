@@ -4,13 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { SEARCH_INPUT_CHANGE, SEARCH_ITEM_CLICKED } from "../Redux/Actions";
 
 const DishSearch = ({
-  allIngredients,
   filterData = [],
   handleSearchItemClick,
   handleSearchChange,
 }) => {
-  console.log(allIngredients);
-
   //Extracting dish names from searchData
   let namesArray = filterData.map((data) => {
     let { name } = data;
@@ -77,8 +74,7 @@ const DishSearch = ({
 
 const mapStateToProps = (state) => {
   let { searchData, filterData } = state.navbarReducer;
-  let { allIngredients } = state.dishSuggestReducer;
-  return { searchData, filterData, allIngredients };
+  return { searchData, filterData };
 };
 
 const mapDispatchToProps = (dispatch) => {
