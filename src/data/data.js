@@ -11,6 +11,7 @@ export const data = [
     state: "West Bengal",
     region: "East",
   },
+
   {
     id: 2,
     name: "Boondi",

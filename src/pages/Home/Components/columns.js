@@ -21,7 +21,7 @@ export const COLUMNS = [
     Header: "Diet type",
     accessor: "diet",
     Filter: ColumnFilter,
-    disableFilters: true,
+    //disableFilters: true,
     disableSortBy: true,
   },
   {

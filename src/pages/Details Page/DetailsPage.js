@@ -5,7 +5,7 @@ import DishDetailsCard from "./Components/DishDetailsCard";
 
 const DetailsPage = ({ rowData }) => {
   let navigate = useNavigate();
-  console.log(rowData);
+  //console.log(rowData);
 
   return (
     <section className="dish-details-wrapper">
